@@ -21,8 +21,9 @@ export class AppComponent {
 
   ConnectMe(){
     var ipAddress = '192.168.8.119';
-    var port = '8008';
+    var port = '8008'; // TODO1 : use port 8043 to SSL/TLS
     this.eposDev.connect(ipAddress, port, (resultConnect : any) => this.callback_connect(resultConnect));
+    //this.eposDev.connect(ipAddress, port, (resultConnect : any) => this.callback_connect(resultConnect),{"eposprint":true});
   }
 
   callback_connect(resultConnect : any){
